@@ -34,25 +34,31 @@
 
 ## About The Project
 
-This project provides Java implementations of several Gang of Four (GoF) design patterns, offering practical examples for understanding and applying these patterns in software development. The included patterns are: Command, Decorator, MVC (Model-View-Controller), and Singleton.
+This project provides Java implementations of several Gang of Four (GoF) design patterns, offering practical examples for understanding and applying these patterns in software development. The included patterns are: Adapter, Command, Decorator, Factory, MVC (Model-View-Controller), Singleton, and Visitor.
 
 ### Key Features
 
-- **Command Pattern:** Demonstrates encapsulating a request as an object, allowing for parameterization of clients with different requests, queuing of requests, and logging of requests.
-- **Decorator Pattern:** Shows how to add responsibilities to objects dynamically, providing a flexible alternative to subclassing for extending functionality.
-- **MVC Pattern:** Illustrates the separation of concerns by dividing the application into Model (data), View (user interface), and Controller (input handling) components.
-- **Singleton Pattern:** Provides a way to ensure that only one instance of a class exists and provides a global point of access to it.
+- **Adapter Pattern:** Converts the interface of a class into another interface clients expect. Lets classes work together that couldn't otherwise because of incompatible interfaces.
+- **Command Pattern:** Encapsulates a request as an object, allowing for parameterization of clients with different requests, queuing of requests, and logging of requests.
+- **Decorator Pattern:** Adds responsibilities to objects dynamically, providing a flexible alternative to subclassing for extending functionality.
+- **Factory Pattern:** Defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+- **MVC Pattern:** Separates the application into Model (data), View (user interface), and Controller (input handling) components.
+- **Singleton Pattern:** Ensures that only one instance of a class exists and provides a global point of access to it.
+- **Visitor Pattern:** Represents an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
 
 ## Architecture
 
 The project is structured into separate directories for each design pattern, with each directory containing the necessary Java files to demonstrate the pattern's implementation.
 
-- **Command:** Contains `Caller.java` and the `Command` interface (not present in the provided code but implied).
+- **Adapter:** Contains `Adaptee.java`, `Adapter.java`, `Client.java`, and `ConcreteAdapter.java` to demonstrate adapting an interface.
+- **Command:** Contains `Caller.java` and the `Command` interface (not explicitly present but implied).
 - **Decorator:** Includes `Client.java`, `Component.java`, `ConcreteComponent.java`, `ConcreteDecorator.java`, and `Decorator.java` to showcase dynamic object extension.
+- **Factory:** Includes `ConcreteProductA.java`, `ConcreteProductB.java`, `Main.java`, `Product.java`, and `ProductFactory.java` to demonstrate object creation.
 - **MVC:** Consists of `Client.java`, `Controller.java`, `Model.java`, `Observer.java`, `Subject.java`, and `View.java` to exemplify the separation of concerns in application design.
 - **Singleton:** Features `Client.java` and `Singleton.java` to demonstrate the creation of a single instance class.
+- **Visitor:** Includes `Client.java`, `ConcreteElementA.java`, `ConcreteElementB.java`, `ConcreteVisitor.java`, `Element.java`, and `Visitor.java` to demonstrate operations on object structures.
 
-The project utilizes Java as the primary language for implementing the design patterns.  No external libraries are explicitly required, focusing on core Java concepts.
+The project utilizes Java as the primary language for implementing the design patterns. No external libraries are explicitly required, focusing on core Java concepts.
 
 ## Getting Started
 
@@ -66,7 +72,7 @@ The project utilizes Java as the primary language for implementing the design pa
 
 ### Installation
 
-To run the examples, clone the repository and compile the Java files using a Java compiler (like `javac`). Then, execute the `Client.java` file in each pattern's directory to see the pattern in action.
+To run the examples, clone the repository and compile the Java files using a Java compiler (like `javac`). Then, execute the `Client.java` or `Main.java` file in each pattern's directory to see the pattern in action.
 
 1. Clone the repository:
    ```sh
@@ -84,7 +90,7 @@ To run the examples, clone the repository and compile the Java files using a Jav
    ```sh
    java Client
    ```
-   Repeat steps 2-4 for other patterns (Command, MVC, Singleton).
+   Repeat steps 2-4 for other patterns (Adapter, Command, Decorator, MVC, Singleton, Visitor). For the Factory pattern, run `Main.java` instead of `Client.java`.
 
 ## Acknowledgments
 
